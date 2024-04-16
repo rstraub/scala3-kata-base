@@ -4,9 +4,7 @@ import org.approvaltests.Approvals
 import org.junit.jupiter.api.Test
 import org.scalatestplus.junit5.JUnitSuite
 
-class ApprovalSpec extends JUnitSuite {
+class ApprovalSpec extends JUnitSuite:
   @Test
-  def helloApproval(): Unit = {
+  def helloApproval(): Unit =
     Approvals.verify("hello!")
-  }
-}

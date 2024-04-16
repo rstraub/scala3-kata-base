@@ -7,10 +7,8 @@ import org.scalatestplus.scalacheck.ScalaCheckPropertyChecks
 class PropertyBasedSpec
     extends AnyFlatSpec
     with Matchers
-    with ScalaCheckPropertyChecks {
-  "scalacheck" should "run property-based tests" in {
+    with ScalaCheckPropertyChecks:
+  "scalacheck" should "run property-based tests" in:
     forAll { (a: Int, b: Int) =>
       a + b shouldEqual b + a
     }
-  }
-}
