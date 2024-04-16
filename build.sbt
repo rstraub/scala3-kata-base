@@ -9,6 +9,7 @@ ThisBuild / semanticdbVersion := scalafixSemanticdb.revision
 ThisBuild / scalafixScalaBinaryVersion := "2.13"
 ThisBuild / javacOptions ++= Seq("-source", "21", "-target", "21")
 tpolecatScalacOptions += ScalacOptions.release("21")
+tpolecatScalacOptions += ScalacOptions.advancedOption("source:3")
 
 lazy val root = project
   .enablePlugins(ScalafmtPlugin)
