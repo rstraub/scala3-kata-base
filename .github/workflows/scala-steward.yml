@@ -11,9 +11,6 @@ jobs:
     runs-on: ubuntu-latest
     name: Launch Scala Steward
     steps:
-      - name: Set Git author
-        run: |
-          git config --global user.name "scala-steward[bot]"
       - name: Launch Scala Steward
         uses: scala-steward-org/scala-steward-action@v2
         with:
