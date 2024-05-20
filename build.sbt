@@ -2,7 +2,7 @@ import Dependencies.*
 import org.typelevel.scalacoptions.ScalacOptions
 import sbt.Keys.libraryDependencies
 
-ThisBuild / scalaVersion := "3.4.1"
+ThisBuild / scalaVersion := "3.4.2"
 ThisBuild / organization := "nl.codecraftr"
 ThisBuild / semanticdbEnabled := true
 ThisBuild / semanticdbVersion := scalafixSemanticdb.revision
