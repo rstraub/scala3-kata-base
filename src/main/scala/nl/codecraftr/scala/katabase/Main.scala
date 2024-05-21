@@ -1,4 +1,4 @@
-package nl.codecraftr.scala.kata
+package nl.codecraftr.scala.katabase
 
 object Main extends App:
   def hello(name: String): String = name match
