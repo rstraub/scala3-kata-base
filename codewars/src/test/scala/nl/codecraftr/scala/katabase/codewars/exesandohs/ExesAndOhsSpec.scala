@@ -9,21 +9,22 @@ class ExesAndOhsSpec
     with Matchers
     with TableDrivenPropertyChecks:
   private val matchedCases = Table(
-    ("in"),
-    ("xo"),
-    ("xoxo")
+    "input",
+    "xo",
+    "xoxo",
+    "xO"
   )
 
   private val unmatchedCases =
-    Table("in", "xox", "x")
+    Table("input", "xox", "x")
 
   "xo" should:
     forAll(matchedCases) { str =>
-      s"return true given equal x's and o's $str" in:
+      s"return true given matched x's and o's '$str'" in:
         xo(str) shouldBe true
     }
 
     forAll(unmatchedCases) { str =>
-      s"return false given unequal x's and o's $str" in:
+      s"return false given unmatched x's and o's '$str'" in:
         xo(str) shouldBe false
     }
