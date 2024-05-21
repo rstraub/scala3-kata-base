@@ -19,6 +19,7 @@ class ExesAndOhsSpec
   private val unmatchedCases =
     Table("input", "xox", "x", "zzoo")
 
+
   "xo" should:
     forAll(matchedCases) { str =>
       s"return true given matched x's and o's '$str'" in:
@@ -29,3 +30,6 @@ class ExesAndOhsSpec
       s"return false given unmatched x's and o's '$str'" in:
         xo(str) shouldBe false
     }
+
+    "return true given no x or o present" in:
+      xo("zpzp") shouldBe true
