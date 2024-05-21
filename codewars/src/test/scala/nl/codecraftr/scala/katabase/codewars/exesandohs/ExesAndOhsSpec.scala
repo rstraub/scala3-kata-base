@@ -8,22 +8,22 @@ class ExesAndOhsSpec
     extends AnyWordSpec
     with Matchers
     with TableDrivenPropertyChecks:
-  private val validCases = Table(
+  private val matchedCases = Table(
     ("in"),
     ("xo"),
     ("xoxo")
   )
 
-  private val invalidCases =
-    Table("in", "xox", "x", "bla")
+  private val unmatchedCases =
+    Table("in", "xox", "x")
 
   "xo" should:
-    forAll(validCases) { str =>
+    forAll(matchedCases) { str =>
       s"return true given equal x's and o's $str" in:
         xo(str) shouldBe true
     }
 
-    forAll(invalidCases) { str =>
+    forAll(unmatchedCases) { str =>
       s"return false given unequal x's and o's $str" in:
         xo(str) shouldBe false
     }
