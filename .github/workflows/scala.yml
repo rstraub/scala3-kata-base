@@ -23,7 +23,7 @@ jobs:
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v4
         with:
-          directory: ./target/scala-*/coverage-report/
+          directory: ./target/scala-3.4.2/coverage-report/
           fail_ci_if_error: true
           files: ./cobertura.xml
           name: scala3-kata-base
