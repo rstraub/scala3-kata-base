@@ -12,11 +12,12 @@ class ExesAndOhsSpec
     "input",
     "xo",
     "xoxo",
-    "xO"
+    "xO",
+    "xoM"
   )
 
   private val unmatchedCases =
-    Table("input", "xox", "x")
+    Table("input", "xox", "x", "zzoo")
 
   "xo" should:
     forAll(matchedCases) { str =>
