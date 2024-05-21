@@ -1,31 +1,31 @@
 name: Scala CI
 
 on:
-    push:
-        branches: [ main ]
-    pull_request:
-        branches: [ main ]
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
 
 jobs:
-    build:
+  build:
 
-        runs-on: ubuntu-latest
+    runs-on: ubuntu-latest
 
-        steps:
-            -   uses: actions/checkout@v4.1.1
-            -   name: Set up JDK
-                uses: actions/setup-java@v4.0.0
-                with:
-                    java-version: '21'
-                    distribution: 'temurin'
-            -   name: Quality Check
-                run: ./sbtx clean coverage test scalafmtCheckAll "scalafixAll --check" coverageReport
-            -   name: Upload coverage to Codecov
-                uses: codecov/codecov-action@v4
-                with:
-                    directory: ./target/scala-3.4.2/coverage-report/
-                    fail_ci_if_error: true
-                    files: ./cobertura.xml
-                    name: scala3-kata-base
-                    token: ${{ secrets.CODECOV_TOKEN }}
-                    slug: rstraub/scala3-kata-base
+    steps:
+      - uses: actions/checkout@v4.1.1
+      - name: Set up JDK
+        uses: actions/setup-java@v4.0.0
+        with:
+          java-version: '21'
+          distribution: 'temurin'
+      - name: Quality Check
+        run: ./sbtx clean coverage test scalafmtCheckAll "scalafixAll --check" coverageReport coverageAggregate
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v4
+        with:
+          directory: ./target/scala-*/coverage-report/
+          fail_ci_if_error: true
+          files: ./cobertura.xml
+          name: scala3-kata-base
+          token: ${{ secrets.CODECOV_TOKEN }}
+          slug: rstraub/scala3-kata-base

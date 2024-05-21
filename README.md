@@ -6,6 +6,10 @@
 
 Collection of my solutions to codekata's in Scala.
 
+## Modules
+
+- [Codewars](codewars). Solutions to [Codewars](https://www.codewars.com/) katas.
+
 ## Toolchain
 
 * [Sbt](https://www.scala-sbt.org/) (build tool)
