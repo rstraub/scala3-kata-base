@@ -36,3 +36,7 @@ lazy val exercism =
     .in(file("exercism"))
     .dependsOn(meta)
     .settings(name := "exercism", commonSettings)
+
+lazy val inspect =
+  project
+    .dependsOn(meta, codewars, exercism).settings(commonSettings)
