@@ -1,4 +1,4 @@
-package nl.codecraftr.scala.katabase.codewars.exesandohs
+package nl.codecraftr.katabase.scala.codewars.exesandohs
 
 def xo(str: String): Boolean =
   val xsAndOhs = str.toLowerCase

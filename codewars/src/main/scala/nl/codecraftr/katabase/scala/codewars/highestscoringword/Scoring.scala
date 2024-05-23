@@ -1,4 +1,4 @@
-package nl.codecraftr.scala.katabase.codewars.highestscoringword
+package nl.codecraftr.katabase.scala.codewars.highestscoringword
 
 object Scoring {
   private def scores =

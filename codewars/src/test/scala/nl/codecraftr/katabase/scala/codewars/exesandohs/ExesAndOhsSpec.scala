@@ -1,4 +1,4 @@
-package nl.codecraftr.scala.katabase.codewars.exesandohs
+package nl.codecraftr.katabase.scala.codewars.exesandohs
 
 import org.scalatest.matchers.should.Matchers
 import org.scalatest.prop.TableDrivenPropertyChecks

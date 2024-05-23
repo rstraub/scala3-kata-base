@@ -1,9 +1,6 @@
-package nl.codecraftr.scala.katabase.codewars.highestscoringword
+package nl.codecraftr.katabase.scala.codewars.highestscoringword
 
-import nl.codecraftr.scala.katabase.codewars.highestscoringword.Scoring.{
-  high,
-  score
-}
+import Scoring.{high, score}
 import org.scalatest.flatspec.AnyFlatSpec
 import org.scalatest.matchers.should.Matchers
 import org.scalatest.prop.TableDrivenPropertyChecks

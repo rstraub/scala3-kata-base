@@ -25,3 +25,6 @@ lazy val root = project
 lazy val codewars = project
   .in(file("codewars"))
   .settings(name := "codewars", commonSettings)
+
+lazy val exercism =
+  project.in(file("exercism")).settings(name := "exercism", commonSettings)
