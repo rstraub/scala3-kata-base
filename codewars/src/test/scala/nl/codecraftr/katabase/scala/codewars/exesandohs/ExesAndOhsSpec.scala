@@ -1,5 +1,6 @@
 package nl.codecraftr.katabase.scala.codewars.exesandohs
 
+import nl.codecraftr.katabase.scala.codewars.exesandohs.ExesAndOhs.xo
 import org.scalatest.matchers.should.Matchers
 import org.scalatest.prop.TableDrivenPropertyChecks
 import org.scalatest.wordspec.AnyWordSpec

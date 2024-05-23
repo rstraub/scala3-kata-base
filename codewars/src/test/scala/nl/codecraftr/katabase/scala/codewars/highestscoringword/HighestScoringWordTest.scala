@@ -1,12 +1,11 @@
 package nl.codecraftr.katabase.scala.codewars.highestscoringword
 
-import Scoring.{high, score}
+import HighestScoringWord.{high, score}
 import org.scalatest.flatspec.AnyFlatSpec
 import org.scalatest.matchers.should.Matchers
 import org.scalatest.prop.TableDrivenPropertyChecks
 
-// https://www.codewars.com/kata/57eb8fcdf670e99d9b000272/train/scala
-class HighestScoringWordSpec
+class HighestScoringWordTest
     extends AnyFlatSpec
     with Matchers
     with TableDrivenPropertyChecks {

@@ -3,7 +3,11 @@ package nl.codecraftr.katabase.scala.exercism.flattenarray
 import org.scalatest.funsuite.AnyFunSuite
 import org.scalatest.matchers.should.Matchers
 
-// https://exercism.org/tracks/scala/exercises/flatten-array
+@SuppressWarnings(
+  Array(
+    "scalafix:DisableSyntax.null"
+  )
+)
 class FlattenArrayTest extends AnyFunSuite with Matchers {
   test("no nesting") {
     FlattenArray.flatten(List(0, 1, 2)) should be(List(0, 1, 2))

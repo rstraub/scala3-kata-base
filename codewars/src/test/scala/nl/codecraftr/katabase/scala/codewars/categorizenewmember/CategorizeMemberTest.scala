@@ -1,11 +1,10 @@
 package nl.codecraftr.katabase.scala.codewars.categorizenewmember
 
+import nl.codecraftr.katabase.scala.codewars.categorizenewmember.CategorizeMember.openOrSenior
 import org.scalatest.flatspec.AnyFlatSpec
 import org.scalatest.matchers.should.Matchers
 import org.scalatest.prop.TableDrivenPropertyChecks
 
-/** https://www.codewars.com/kata/5502c9e7b3216ec63c0001aa/scala
-  */
 class CategorizeMemberTest
     extends AnyFlatSpec
     with Matchers

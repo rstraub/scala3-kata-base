@@ -1,6 +1,9 @@
 package nl.codecraftr.katabase.scala.codewars.highestscoringword
 
-object Scoring {
+import nl.codecraftr.katabase.scala.meta.Kata
+
+@Kata("https://www.codewars.com/kata/57eb8fcdf670e99d9b000272/train/scala")
+object HighestScoringWord {
   private def scores =
     ('a' to 'z').zipWithIndex.map { case (c, i) => (c, i + 1) }.toMap
 
