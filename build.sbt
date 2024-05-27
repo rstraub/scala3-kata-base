@@ -24,7 +24,10 @@ lazy val root = project
 
 lazy val meta = project
   .in(file("meta"))
-  .settings(name := "meta", commonSettings)
+  .settings(
+    name := "meta",
+    commonSettings
+  )
 
 lazy val codewars = project
   .in(file("codewars"))
@@ -39,4 +42,8 @@ lazy val exercism =
 
 lazy val inspect =
   project
-    .dependsOn(meta, codewars, exercism).settings(commonSettings)
+    .dependsOn(meta, codewars, exercism)
+    .settings(
+      commonSettings,
+      libraryDependencies += "org.reflections" % "reflections" % "0.10.2"
+    )

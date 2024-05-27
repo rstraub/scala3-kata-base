@@ -4,6 +4,8 @@ import org.scalatest.flatspec.AnyFlatSpec
 import org.scalatest.matchers.should.Matchers
 import org.scalatest.prop.TableDrivenPropertyChecks
 
+import java.lang.annotation.Annotation
+
 class KataTest extends AnyFlatSpec with Matchers with TableDrivenPropertyChecks:
   "source" should "extract the source of the kata given a known source" in:
     val cases = Table(
@@ -21,5 +23,10 @@ class KataTest extends AnyFlatSpec with Matchers with TableDrivenPropertyChecks:
     )
 
     forAll(cases) { (input, expected) =>
-      Kata(input).source() shouldBe expected
+      val k = new Kata:
+        override def url(): String = input
+
+        override def annotationType(): Class[? <: Annotation] = ???
+
+      KataSource.source(k) shouldBe expected
     }
