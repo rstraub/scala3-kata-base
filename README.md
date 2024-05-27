@@ -5,6 +5,7 @@
 [![codecov](https://codecov.io/gh/rstraub/scala3-kata-base/graph/badge.svg?token=Y39A9eH26V)](https://codecov.io/gh/rstraub/scala3-kata-base)
 
 Collection of my solutions to codekata's in Scala.
+Find the full, and always up to date katabase [here](katabase.md).
 
 ## Modules
 
