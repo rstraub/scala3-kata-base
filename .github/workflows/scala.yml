@@ -3,8 +3,18 @@ name: Scala CI
 on:
   push:
     branches: [ main ]
+    paths:
+      - '**.scala'
+      - 'build.sbt'
+      - '.scalafmt.conf'
+      - '.scalafix.conf'
   pull_request:
     branches: [ main ]
+    paths:
+      - '**.scala'
+      - 'build.sbt'
+      - '.scalafmt.conf'
+      - '.scalafix.conf'
 
 jobs:
   build:
