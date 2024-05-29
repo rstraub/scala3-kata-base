@@ -15,7 +15,7 @@ lazy val commonSettings =
 
 lazy val root = project
   .enablePlugins(ScalafmtPlugin)
-  .aggregate(meta, codewars, exercism)
+  .aggregate(meta, codewars, exercism, katalog)
   .in(file("."))
   .settings(
     name := "scala3-katabase",
