@@ -23,22 +23,23 @@ lazy val root = project
   )
 
 lazy val meta = project
-  .in(file("meta"))
   .settings(
-    name := "meta",
     commonSettings
   )
 
 lazy val codewars = project
-  .in(file("codewars"))
   .dependsOn(meta)
-  .settings(name := "codewars", commonSettings)
+  .settings(commonSettings)
 
 lazy val exercism =
   project
-    .in(file("exercism"))
     .dependsOn(meta)
-    .settings(name := "exercism", commonSettings)
+    .settings(commonSettings)
+
+lazy val katalog =
+  project
+    .dependsOn(meta)
+    .settings(commonSettings)
 
 lazy val inspect =
   project
