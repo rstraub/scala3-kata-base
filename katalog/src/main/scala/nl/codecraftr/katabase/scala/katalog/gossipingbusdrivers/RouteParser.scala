@@ -1,8 +1,8 @@
 package nl.codecraftr.katabase.scala.katalog.gossipingbusdrivers
 
 object RouteParser:
-  def parse(rawRoutes: String): Seq[Seq[Int]] =
-    rawRoutes
+  def parse(unparsedRoutes: String): Seq[Route] =
+    unparsedRoutes
       .split("\n")
       .toList
-      .map(_.split(" ").map(_.toInt).toList)
+      .map(r => new Route(r.split(" ").map(_.toInt).toList))

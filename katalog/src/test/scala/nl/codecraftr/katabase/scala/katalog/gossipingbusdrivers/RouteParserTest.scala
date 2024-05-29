@@ -9,4 +9,4 @@ class RouteParserTest extends AnyFlatSpec with Matchers:
       """1 2 3
         |4 5 6""".stripMargin
 
-    RouteParser.parse(input) shouldBe List(List(1, 2, 3), List(4, 5, 6))
+    RouteParser.parse(input) shouldBe List(Route(1, 2, 3), Route(4, 5, 6))
