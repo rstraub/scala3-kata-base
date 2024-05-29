@@ -1,6 +1,12 @@
 package nl.codecraftr.katabase.scala.katalog.gossipingbusdrivers
 
-case class BusDriver(gossips: List[String], route: Route)
+case class BusDriver(
+    gossips: List[String],
+    route: Route
+):
+  lazy val currentStop: Int = route.stops.head
+  def drive: BusDriver =
+    copy(route = Route(route.stops.tail :+ currentStop))
 
 object BusDriver:
   def createDrivers(routes: Seq[Route]): Seq[BusDriver] =
