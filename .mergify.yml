@@ -2,8 +2,7 @@ pull_request_rules:
   - name: label scala-steward's PRs
     conditions:
       - or:
-          - author=scala-steward
-          - author=scala-steward[bot]
+          - author=scala-steward-rstraub
     actions:
       label:
         add:
@@ -12,8 +11,7 @@ pull_request_rules:
   - name: merge scala-steward's PRs
     conditions:
       - or:
-          - author=scala-steward
-          - author=scala-steward[bot]
+          - author=scala-steward-rstraub
       - status-success=Quality Check
     actions:
       merge:
